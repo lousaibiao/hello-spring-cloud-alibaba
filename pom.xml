@@ -9,7 +9,6 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-
     <groupId>com.lou</groupId>
     <artifactId>hello-spring-cloud-alibaba</artifactId>
     <version>0.0.1-SNAPSHOT</version>
@@ -18,6 +17,7 @@
 
     <modules>
         <module>hello-spring-cloud-alibaba-dependencies</module>
+        <module>hello-spring-cloud-alibaba-provider</module>
     </modules>
 
     <!--管理项目的pom打包-->
@@ -42,6 +42,14 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <!--
+        provides production ready features to help you monitor and manage your application
+        适合生产环境的用于监控和管理应用。
+        -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
     </dependencies>
 
     <developers>
@@ -52,6 +60,7 @@
             <organizationUrl>https://github.com/lousaibiao</organizationUrl>
         </developer>
     </developers>
+
     <!--添加spring cloud 仓库，不然没有最新版版本的spring-cloud-alibaba-dependencies-->
     <repositories>
         <repository>
