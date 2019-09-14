@@ -20,9 +20,12 @@ public class HelloSpringCloudAlibabaProviderApplication {
     @Value("${person.name:default}")
     private String name;
 
+    @Value("${server.port}")
+    private String port;
+
     @GetMapping("getName")
     public String getName(@RequestParam(value = "test") String test) {
-        return name + "---" + test;
+        return name + "---" + test + "---来自端口:" + port;
     }
 
 }
